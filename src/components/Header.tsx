@@ -34,6 +34,7 @@ export default function Header() {
       { href: getLocalePath(locale, '/konvertery'), label: ui.converters },
       { href: getLocalePath(locale, '/guides'), label: ui.guides },
       { href: getLocalePath(locale, '/articles'), label: ui.articles },
+      { href: getLocalePath(locale, '/image-tools'), label: ui.imageTools },
       { href: getLocalePath(locale, '/faq'), label: ui.faq },
     ],
     [locale, ui]
