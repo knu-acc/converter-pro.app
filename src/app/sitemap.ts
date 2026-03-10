@@ -5,7 +5,7 @@ import { articleIntentTypes, getSearchArticles } from '@/lib/search-articles';
 import { absoluteUrl, guideArticles, unitContent } from '@/lib/site';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ['', '/konvertery', '/guides', '/faq', '/about', '/contact', '/privacy', '/terms'];
+  const staticRoutes = ['', '/konvertery', '/guides', '/image-tools', '/faq', '/about', '/contact', '/privacy', '/terms'];
   const now = new Date();
   const pairPages = getAllPairPages();
   const articles = getSearchArticles();
@@ -77,6 +77,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         lastModified: now,
         changeFrequency: 'weekly' as const,
         priority: 0.75,
+      },
+      {
+        url: absoluteUrl(`/lang/${locale}/image-tools`),
+        lastModified: now,
+        changeFrequency: 'weekly' as const,
+        priority: 0.74,
       },
       {
         url: absoluteUrl(`/lang/${locale}/about`),
